@@ -1,0 +1,5 @@
+config.php
+test.php
+logs
+api/
+./scripts/request.js
