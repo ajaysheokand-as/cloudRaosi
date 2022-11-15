@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php require_once("./config.php"); ?>
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <title><?php echo SITE_NAME ?></title>
+  <meta name="description" content="Place the meta description text here.">
+  <meta property="og:title" content="Best Billing Software for Small &amp; Medium Businesses - Get Free Trail Now | Cloud Rasoi" />
+  <meta property="og:site_name" content="Cloud Rasoi" />
+  <meta property="article:tag" content="Accounting Software" />
+  <meta property="article:tag" content="Billing Software" />
+  <meta property="article:tag" content="GST Software" />
+  <meta property="og:description" content="Billing software is an integral part of an accounting software package designed to handle time and billing tracking. Get a Free Cloud Rasoi Billing Software Trail Now" />
+
   <link rel="shortcut icon" href="assets/images/fav.png" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet" />
   <link rel="shortcut icon" href="assets/images/fav.jpg" />
@@ -758,4 +767,5 @@
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <!-- Sweetalert2 -->
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 </html>
