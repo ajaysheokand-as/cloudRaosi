@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <title><?php echo SITE_NAME ?></title>
+  <title><?php echo $SITE_NAME ?></title>
   <meta name="description" content="Place the meta description text here.">
   <meta property="og:title" content="Best Billing Software for Small &amp; Medium Businesses - Get Free Trail Now | Cloud Rasoi" />
   <meta property="og:site_name" content="Cloud Rasoi" />
@@ -733,19 +733,23 @@
           <div class="col-lg-4 col-md-6 socila-link">
             <ul>
               <li>
-                <a><i class="fab fa-github"></i></a>
+                <a href="./terms_and_condition.html" target="_blank">Terms & Condition</a>
+                <!-- <a><i class="fab fa-github"></i></a> -->
               </li>
               <li>
-                <a><i class="fab fa-google-plus-g"></i></a>
+                <a href="./privacy_policy.html" target="_blank">Privacy Policy</i></a>
               </li>
               <li>
-                <a><i class="fab fa-pinterest-p"></i></a>
+                <a href="./aboutus.html" target="_blank">About Us</i></a>
+                <!-- <a><i class="fab fa-pinterest-p"></i></a> -->
               </li>
+              <!-- <li> -->
+                <!-- <a href="./" target="_blank">Terms and Condition</i></a> -->
+                <!-- <a><i class="fab fa-twitter"></i></a> -->
+              <!-- </li> -->
               <li>
-                <a><i class="fab fa-twitter"></i></a>
-              </li>
-              <li>
-                <a><i class="fab fa-facebook-f"></i></a>
+                <a href="./cancellation_refund.html" target="_blank">Cancellation & Refund Policy</i></a>
+                <!-- <a><i class="fab fa-facebook-f"></i></a> -->
               </li>
             </ul>
           </div>
