@@ -86,7 +86,7 @@ $row = mysqli_fetch_assoc($res);
         <hr>
         Name : <b> <?php echo $row['name']; ?> </b>
         <hr>
-        Date: <?php echo  date('d-m-Y h:i:s', strtotime($row['date'])); ?> <br>
+        Date: <?php echo  date('d-m-Y', strtotime($row['date'])); ?> <br>
         Bill No. <?php echo $row['bill_no']; ?>
         <table>
             <thead>
