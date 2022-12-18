@@ -197,7 +197,7 @@ $row = mysqli_fetch_assoc($res);
             </tbody>
         </table>
         <p class="centered" style="font-size: 8px;">Thanks for your visit!
-            <br>Powered By: spicyrasoi.com
+            <br>Powered By: cloudrasoi.com
         </p>
         <br>
         <hr>
