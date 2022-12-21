@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php include("../config.php"); ?>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title><?php echo SITE_NAME ?> | Bill Print</title>
+  <title><?php echo $SITE_NAME ?> | Bill Print</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -28,7 +29,7 @@
     <div class="row">
       <div class="col-4">
         <h2 class="page-header">
-          <i class="fas fa-globe"></i> <?php echo SITE_NAME ?>
+          <i class="fas fa-globe"></i> <?php echo $SITE_NAME ?>
           <small class="float-right">Date: 2/10/2014</small>
         </h2>
       </div>
@@ -39,7 +40,7 @@
       <div class="col-sm-4 invoice-col">
         From
         <address>
-          <strong><?php echo SITE_NAME ?></strong><br>
+          <strong><?php echo $SITE_NAME ?></strong><br>
           795 Folsom Ave, Suite 600<br>
           San Francisco, CA 94107<br>
           Phone: (804) 123-5432<br>

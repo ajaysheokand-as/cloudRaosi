@@ -12,7 +12,7 @@ require_once('logininfo.php');
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?php echo SITE_NAME ?></title>
+    <title><?php echo $SITE_NAME ?></title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback">
@@ -90,7 +90,7 @@ require_once('logininfo.php');
                         <div class="content">
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-lg-12 content-center"><img src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=https%3A%2F%2Fspicyrasoi.com/spicyrasoi/genbill.php?table=0&group=14105&name=141051%2F&choe=UTF-8" title="Link to 0rder From <?php echo SITE_NAME ?>" />
+                                    <div class="col-lg-12 content-center"><img src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=https%3A%2F%2Fspicyrasoi.com/spicyrasoi/genbill.php?table=0&group=14105&name=141051%2F&choe=UTF-8" title="Link to 0rder From <?php echo $SITE_NAME ?>" />
                                     </div>
                                 </div>
                                 <!-- /.row -->

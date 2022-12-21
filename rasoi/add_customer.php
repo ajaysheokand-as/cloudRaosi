@@ -12,7 +12,7 @@ $user = unserialize($_SESSION['user']);
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?php echo SITE_NAME ?></title>
+    <title><?php echo $SITE_NAME ?></title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -40,9 +40,7 @@ $user = unserialize($_SESSION['user']);
     <div class="wrapper">
 
         <!-- Preloader -->
-        <div class="preloader flex-column justify-content-center align-items-center">
-            <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
-        </div>
+        <?php include("./utility/preloader.php"); ?>
 
         <!-- Navbar -->
         <?php include("navbar.php"); ?>
@@ -60,7 +58,7 @@ $user = unserialize($_SESSION['user']);
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                                <li class="breadcrumb-item"><a href="index.php">Home</a> /Add Customer</li>
                                 <!-- <li class="breadcrumb-item active">Dashboard v1</li> -->
                             </ol>
                         </div><!-- /.col -->
@@ -174,7 +172,7 @@ $user = unserialize($_SESSION['user']);
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row">
+                                        <!-- <div class="row">
                                             <div class="col-sm-6">
 
                                                 <div class="form-group">
@@ -204,9 +202,9 @@ $user = unserialize($_SESSION['user']);
                                                     <input type="date" id="checkout" class="form-control" placeholder="">
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> -->
 
-                                        <div class="row">
+                                        <!-- <div class="row">
                                             <div class="col-sm-6">
 
                                                 <div class="form-group">
@@ -219,14 +217,12 @@ $user = unserialize($_SESSION['user']);
                                                     <label>Number of Person</label>
                                                     <div class="custom-file">
                                                         <input type="number" class="form-control" id="customFile">
-                                                        <!-- <label class="custom-file-label" for="customFile">Choose file</label> -->
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> -->
 
-
-                                        <div class="row">
+                                        <!-- <div class="row">
                                             <div class="col-sm-6">
 
                                                 <div class="form-group">
@@ -240,7 +236,7 @@ $user = unserialize($_SESSION['user']);
                                                     <input type="text" id="wherefrom" class="form-control" placeholder="Where From">
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> -->
 
                                         <div class="row">
                                             <div class="col-sm-12">

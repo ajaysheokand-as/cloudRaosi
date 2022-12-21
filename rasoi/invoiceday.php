@@ -3,12 +3,13 @@
 <?php session_start();
 require_once("class/User.php");
 require_once("islogin.php");
+require_once("../config.php");
 ?>
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?php echo SITE_NAME ?></title>
+    <title><?php echo $SITE_NAME ?></title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -40,9 +41,7 @@ require_once("islogin.php");
     <div class="wrapper">
 
         <!-- Preloader -->
-        <!-- <div class="preloader flex-column justify-content-center align-items-center">
-      <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
-    </div> -->
+        <?php include("./utility/preloader.php"); ?>
 
         <!-- Navbar -->
         <?php
@@ -127,7 +126,7 @@ require_once("islogin.php");
                                                         ?>
 
                                                             <tr class="odd">
-                                                                <td class="dtr-control"><?php echo  date('d-m-Y h:i:s', strtotime($row['date'])); ?> </td>
+                                                                <td class="dtr-control"><?php echo  date('d-m-Y', strtotime($row['date'])); ?> </td>
                                                                 <td class="dtr-control"><?php echo $row['bill_no']; ?> </td>
                                                                 <td class="sorting_1"><?php echo $row['name']; ?></td>
                                                                 <td><?php echo $row['order_value']; ?> </td>

@@ -1,9 +1,9 @@
 <html lang="en">
-
+<?php include("../config.php"); ?>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title><?php echo SITE_NAME ?> | Registration Page </title>
+  <title><?php echo $SITE_NAME ?> | Registration Page </title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback">
@@ -34,7 +34,6 @@
             <select id="restaurant" class="form-control">
               <option value="0">Select Restaurant / Hotel</option>
               <?php
-              require_once("../../config.php");
               $sql = "SELECT name,restaurantid as id from restaurant";
               $res = mysqli_query($con, $sql);
               while ($row = mysqli_fetch_assoc($res)) {

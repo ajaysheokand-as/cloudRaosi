@@ -130,7 +130,7 @@ function fetchSubCategory($cat_id)
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title><?php echo SITE_NAME ?></title>
+  <title><?php echo $SITE_NAME ?></title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -294,7 +294,7 @@ function fetchSubCategory($cat_id)
                   </div>
                   <!-- /popup -->
 
-                  <a href="posprint.php?orderid=<?php echo $orderid; ?>" class="btn btn-warning" id="#"><i class="fas fa-eye"> View Order * </i></a>
+                  <!-- <a href="posprint.php?orderid=<?php echo $orderid; ?>" class="btn btn-warning" id="#"><i class="fas fa-eye"> View Order * </i></a> -->
                   <a href="#" class="btn btn-secondary float-right" id="billingprint"><i class="fas fa-rupee-sign"> Billing </i> </a>
 
                 </div>
@@ -694,16 +694,17 @@ function fetchSubCategory($cat_id)
         dataType: "json",
         success: function(result) {
           // console.log(result);
-          if (result.success == true) {
+          if (result.success == true ) {
             // clearTable();
             products.orderid = result.data.orderid;
             products.todayOrderNo = result.data.today_orders;
             console.log(result.data);
             // alert("redirected to print page")
             localStorage.setItem("kotbill", JSON.stringify(products));
-            var print = window.open(`poskotprint.php?table=${products.table.table}&tablegroup=${products.table.tablegroup}`, 'PRINT', "height=800,width=800");
-            print.print()
             location.reload();
+            var print = window.open(`poskotprint.php?table=${products.table.table}&tablegroup=${products.table.tablegroup}`, 'PRINT', "height=800,width=800");
+            // console.log("print=>",print);
+            // print.print()
           }
         },
       });

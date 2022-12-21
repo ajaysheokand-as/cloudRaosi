@@ -3,12 +3,13 @@
 <?php session_start();
 require_once("class/User.php");
 require_once("islogin.php");
+require_once("config.php");
 ?>
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?php echo SITE_NAME ?></title>
+    <title><?php echo $SITE_NAME ?></title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -166,7 +167,7 @@ require_once("islogin.php");
                                                                         </button>
                                                                         <div class="dropdown-menu" role="menu">
                                                                             <!-- <a class="dropdown-item" target="_blank" href="posprint.php?orderid=<?php echo $orderid; ?>"><span class="btn btn-warning btn-sm">View </span></a> -->
-                                                                            <a class="dropdown-item" href="https://api.whatsapp.com/send/?phone=91<?php echo  $row['mobile']; ?>&text=Hi *<?php echo $row['name']; ?>*. Your Total Sale Value  is Rs *<?php echo $row['order_value']; ?>*. Sales Report From <?php echo SITE_NAME ?>."> <span class="btn btn-success btn-sm">Whatsapp</span></a>
+                                                                            <a class="dropdown-item" href="https://api.whatsapp.com/send/?phone=91<?php echo  $row['mobile']; ?>&text=Hi *<?php echo $row['name']; ?>*. Your Total Sale Value  is Rs *<?php echo $row['order_value']; ?>*. Sales Report From <?php echo $SITE_NAME ?>."> <span class="btn btn-success btn-sm">Whatsapp</span></a>
                                                                             <!-- TODO TO ADD AMOUNT FOR RESTAURANT USING POP UP -->
                                                                             <a class="dropdown-item "> <span class="btn btn-warning btn-sm "> Add Amount </span> </a>
 

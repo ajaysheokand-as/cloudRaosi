@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php include("../config.php"); ?>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?php echo SITE_NAME ?></title>
+    <title><?php echo $SITE_NAME ?></title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -39,14 +39,11 @@
 
 
         <!-- Preloader -->
-        <!-- <div class="preloader flex-column justify-content-center align-items-center">
-      <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
-    </div> -->
+        <?php include("./utility/preloader.php"); ?>
 
         <!-- Navbar -->
         <?php
         session_start();
-        include("../config.php");
         include("class/User.php");
         require_once("islogin.php");
         include("navbar.php");
@@ -180,7 +177,7 @@
                                                                 <td class="sorting_1"><?php echo $row['name']; ?></td>
                                                                 <td class="sorting_1"><?php echo $row['order_value']; ?></td>
                                                                 <td class="sorting_1"><?php echo $row['remarks']; ?></td>
-                                                                <td class="sorting_1"><?php echo date('d-m-Y h:i:s', strtotime($row['date'])); ?></td>
+                                                                <td class="sorting_1"><?php echo date('d-m-Y', strtotime($row['date'])); ?></td>
                                                                 <td class="sorting_1"><a href="#" onclick="deleteZSinvoice(<?php echo $row['id'] ?>)" class="btn btn-danger btn-sm">Delete</a></td>
 
                                                             </tr>

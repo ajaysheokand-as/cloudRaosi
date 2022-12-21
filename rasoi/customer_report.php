@@ -12,7 +12,7 @@ require_once("islogin.php");
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title><?php echo SITE_NAME ?></title>
+  <title><?php echo $SITE_NAME ?></title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -50,9 +50,7 @@ require_once("islogin.php");
 
 
     <!-- Preloader -->
-    <!-- <div class="preloader flex-column justify-content-center align-items-center">
-      <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
-    </div> -->
+    <?php include("./utility/preloader.php"); ?>
 
     <!-- Navbar -->
     <?php
@@ -234,7 +232,7 @@ require_once("islogin.php");
                             ?>
 
                               <tr class="odd">
-                                <td class="dtr-control"><?php echo date('d-m-Y h:i:s', strtotime($row['date'])); ?> </td>
+                                <td class="dtr-control"><?php echo date('d-m-Y', strtotime($row['date'])); ?> </td>
                                 <td class="dtr-control"><a href="posprint.php?orderid=<?php echo $orderid; ?>" target="_blank">
                                     <?php echo $row['id']; ?> </a></td>
                                 <td class="sorting_1"><?php echo $row['pay_type']; ?></td>
@@ -294,7 +292,7 @@ require_once("islogin.php");
                             ?>
 
                               <tr class="odd">
-                                <td class="dtr-control"><?php echo date('d-m-Y h:i:s', strtotime($row['date'])); ?> </td>
+                                <td class="dtr-control"><?php echo date('d-m-Y', strtotime($row['date'])); ?> </td>
                                 <td class="dtr-control"><?php echo $row['amt']; ?> </td>
                                 <td><?php echo $row['remark']; ?></td>
 

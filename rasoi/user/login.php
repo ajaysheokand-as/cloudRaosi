@@ -1,5 +1,5 @@
 <html lang="en">
-
+<?php include("../config.php"); ?>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,7 +20,7 @@
     <!-- /.login-logo -->
     <div class="card card-outline card-primary">
       <div class="card-header text-center">
-        <a href="#" class="h1"><b><?php echo SITE_NAME ?></b></a>
+        <a href="#" class="h1"><b><?php echo $SITE_NAME ?></b></a>
       </div>
       <div class="card-body">
         <p class="login-box-msg">Sign in to start your session</p>

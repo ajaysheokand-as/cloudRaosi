@@ -91,11 +91,9 @@ $row = mysqli_fetch_assoc($res);
         <table>
             <thead>
                 <tr>
-
                     <th class="description">Item</th>
                     <th class="quantity centered">Q.</th>
                     <th class="price">Price</th>
-
                 </tr>
             </thead>
             <tbody>

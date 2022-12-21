@@ -15,7 +15,7 @@ if (mysqli_num_rows($res) > 0) {
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?php echo SITE_NAME ?></title>
+    <title><?php echo $SITE_NAME ?></title>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <!-- Google Font: Source Sans Pro -->
@@ -45,7 +45,7 @@ if (mysqli_num_rows($res) > 0) {
                     </h2>
                   </div>
                   <div class="col-md-6">
-                    <p class="float-right">Date: <?php echo  date('d-m-Y h:i:s', strtotime($row['date'])); ?></p>
+                    <p class="float-right">Date: <?php echo  date('d-m-Y', strtotime($row['date'])); ?></p>
                   </div>
 
                 </div>
