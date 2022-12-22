@@ -19,6 +19,11 @@ $data = json_decode(file_get_contents('php://input'), true);
         return;
     }
  }
+
+}catch(Exception $e){
+    echo $e;
+}
+
 function send_email($from,$subject,$message){
     $headers = `From: $from` . "\r\n" .
     `Reply-To: $from` . "\r\n" .
@@ -58,8 +63,3 @@ function send_email($from,$subject,$message){
     }
 
 }
-}catch(Exception $e){
-    echo $e;
-}
-
-?>
