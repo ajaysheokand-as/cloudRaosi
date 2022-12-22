@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php require_once("./config.php"); ?>
-<?php 
-if(isset($_GET['sms'])){
-  
+<?php require_once("./config.php"); 
+?>
+<?php
+if (isset($_GET['sms'])) {
+
   $curl = curl_init();
 
   curl_setopt_array($curl, array(
-    CURLOPT_URL => "https://www.fast2sms.com/dev/bulkV2?authorization=iDJzjYUGRuHISxKycq2sEbZ1lM4X53FrBNdfkmAe768nCwLV0OrHLSRpWfCZa053xnchTvI8tJlzEGYb&sender_id=TXTIND&message=".urlencode('This is a test message')."&route=v3&numbers=".urlencode('7404880600,8570996916'),
+    CURLOPT_URL => "https://www.fast2sms.com/dev/bulkV2?authorization=iDJzjYUGRuHISxKycq2sEbZ1lM4X53FrBNdfkmAe768nCwLV0OrHLSRpWfCZa053xnchTvI8tJlzEGYb&sender_id=TXTIND&message=" . urlencode('This is a test message') . "&route=v3&numbers=" . urlencode('7404880600,8570996916'),
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_ENCODING => "",
     CURLOPT_MAXREDIRS => 10,
@@ -20,20 +21,20 @@ if(isset($_GET['sms'])){
       "cache-control: no-cache"
     ),
   ));
-  
+
   $response = curl_exec($curl);
   $err = curl_error($curl);
-  
+
   curl_close($curl);
-  
+
   if ($err) {
     echo "cURL Error #:" . $err;
   } else {
     echo $response;
   }
-
 }
 ?>
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -45,7 +46,7 @@ if(isset($_GET['sms'])){
   <meta property="article:tag" content="Billing Software" />
   <meta property="article:tag" content="GST Software" />
   <meta property="og:description" content="Billing software is an integral part of an accounting software package designed to handle time and billing tracking. Get a Free Cloud Rasoi Billing Software Trail Now" />
-  <meta property="og:image" content= "./assets/images/cloud-rasoi-logo.png">  
+  <meta property="og:image" content="./assets/images/cloud-rasoi-logo.png">
 
   <link rel="shortcut icon" href="assets/images/fav.png" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet" />
@@ -55,22 +56,22 @@ if(isset($_GET['sms'])){
   <link rel="stylesheet" href="assets/css/fontawsom-all.min.css" />
   <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
   <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicon/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="assets/images/favicon/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicon/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="assets/images/favicon/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicon/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="assets/images/favicon/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="assets/images/favicon/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicon/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="assets/images/favicon/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
-<link rel="manifest" href="assets/images/favicon/manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="assets/images/favicon/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
+  <link rel="apple-touch-icon" sizes="60x60" href="assets/images/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/images/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="assets/images/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="assets/images/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/images/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="assets/images/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
@@ -760,11 +761,11 @@ if(isset($_GET['sms'])){
               <h4>Contact US</h4>
             </div>
             <div class="form-body">
-              <input type="text" placeholder="Enter Name" class="form-control" />
-              <input type="text" placeholder="Enter Mobile no" class="form-control" />
-              <input type="text" placeholder="Enter Email Address" class="form-control" />
-              <input type="text" placeholder="Your Message" class="form-control" />
-              <button class="btn btn-sm btn-success w-100">
+              <input type="text" id="name" name="name" placeholder="Enter Name" class="form-control" />
+              <input type="number" id="mobile_no" name="mobile_no" placeholder="Enter Mobile no" class="form-control" />
+              <input type="email" id="email_address" name="email_address" placeholder="Enter Email Address" class="form-control" />
+              <input type="text" id="message" name="message" placeholder="Your Message" class="form-control" />
+              <button type="submit" id="send_request" onclick="sendEmail()" class="btn btn-sm btn-success w-100" name="sendRequest">
                 Send Request
               </button>
             </div>
@@ -794,8 +795,8 @@ if(isset($_GET['sms'])){
                 <!-- <a><i class="fab fa-pinterest-p"></i></a> -->
               </li>
               <!-- <li> -->
-                <!-- <a href="./" target="_blank">Terms and Condition</i></a> -->
-                <!-- <a><i class="fab fa-twitter"></i></a> -->
+              <!-- <a href="./" target="_blank">Terms and Condition</i></a> -->
+              <!-- <a><i class="fab fa-twitter"></i></a> -->
               <!-- </li> -->
               <li>
                 <a href="./cancellation_refund.html" target="_blank">Cancellation & Refund Policy</i></a>
@@ -821,5 +822,67 @@ if(isset($_GET['sms'])){
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <!-- Sweetalert2 -->
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+<script>
+  function sendEmail() {
+
+    const name = $("#name").val();
+    const mobile_no = $("#mobile_no").val();
+    const email_address = $("#email_address").val();
+    const message = $("#message").val();
+    if (mobile == "" || mobile_no == "" || email_address == "" || message == "") {
+      alert("Please fill all field");
+    }
+    $(document).ajaxSend(() => {
+      $("#send_request").prop("disabled", true);
+      $("#send_request").html("Sending...");
+    });
+    $.ajax({
+      url: "./rasoi/utility/emails.php",
+      method: "POST",
+      data: JSON.stringify({
+        name: name,
+        mobile_no: mobile_no,
+        email_address: email_address,
+        message: message,
+      }),
+      contentType: "application/json",
+      dataType: "json",
+      success: function(result) {
+        console.log(result);
+
+        const json = result;
+        if (json.success) {
+          swal({
+            title: "Send Successfull",
+            icon: "success"
+          });
+        } else
+          swal({
+            title: "Error Occured",
+            text: json.error,
+            icon: "error"
+          });
+
+        $("#send_request").prop("disabled", false);
+
+        $("#send_request").html("Send Request");
+      },
+    });
+    $(document).ajaxError((res) => {
+      console.log(res);
+
+      $("#send_request").attr("disabled", false);
+      $("#send_request").html("Send Request");
+    });
+    $(document).ajaxComplete((res) => {
+      $("#send_request").attr("disabled", false);
+      $("#send_request").html("Send Request");
+    });
+  }
+</script>
 
 </html>
