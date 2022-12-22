@@ -1,4 +1,5 @@
 <?php
+try{
 $data = json_decode(file_get_contents('php://input'), true);
  if (isset($data['name']) && isset($data['mobile_no']) && isset($data['email_address']) && isset($data['message'])) {
     if (strlen($data['mobile_no']) >= 10) {
@@ -56,6 +57,9 @@ function send_email($from,$subject,$message){
         ]);
     }
 
+}
+}catch(Exception $e){
+    echo $e;
 }
 
 ?>
