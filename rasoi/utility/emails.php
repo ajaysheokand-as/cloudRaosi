@@ -1,15 +1,22 @@
 <?php
+$data = json_decode(file_get_contents('php://input'), true);
  if (isset($data['name']) && isset($data['mobile_no']) && isset($data['email_address']) && isset($data['message'])) {
-    if (strlen($data['mobile']) < 10) {
+    if (strlen($data['mobile_no']) >= 10) {
         $name = $data['name'];
         $mobile_no = $data['mobile_no'];
         $email_address = ($data['email_address']);
         $message = ($data['message']);
 
-        $message_data = $message + "From: Name:"+"$name"+"Mobile No: " + $mobile_no + "Email ID : " +$email_address;
+        $message_data = $message . "From: Name:"."$name"."Mobile No: " . $mobile_no . "Email ID : " .$email_address;
         echo $message_data;
-        send_email($email_address,$subject,$message);
-    }else echo `<script>alert("Enter a valid Mobile Number")</script>`;
+        send_email($email_address,"New Contact Request From ".$name,$message_data);
+    }else{
+        echo json_encode( [
+            'success' => false,
+            'message' => "Enter a valid Mobile Number",
+        ]);
+        return;
+    }
  }
 function send_email($from,$subject,$message){
     $headers = `From: $from` . "\r\n" .
@@ -26,16 +33,27 @@ function send_email($from,$subject,$message){
         }else{
            $response =  mail($to, $subject, $message, $headers);
            if($response == 1){
-            echo `<script>alert("Mail Sent Successfull")</script>`;
+             echo json_encode( [
+                'success' => true,
+                'message' => "Email Sent Successfull",
+            ]);
+            return;
            }else{
-            echo `<script>alert("oohoo .... Email could not be sent.
-            Please go back and try again!")</script>`;
+            echo json_encode( [
+                'success' => false,
+                'message' => "Oohoo .... Email could not be sent.
+                Please go back and try again!",
+            ]);
+            return;
            }
         }
     }
     catch(Exception $e){
         $error = $e->getMessage();
-        echo `<script>alert($error)</script>`;
+        echo json_encode( [
+            'success' => false,
+            'message' => $error,
+        ]);
     }
 
 }

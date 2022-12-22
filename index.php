@@ -850,9 +850,8 @@ if (isset($_GET['sms'])) {
         message: message,
       }),
       contentType: "application/json",
-      dataType: "json",
       success: function(result) {
-        console.log(result);
+        console.log("Result=>",result);
 
         const json = result;
         if (json.success) {
@@ -873,7 +872,7 @@ if (isset($_GET['sms'])) {
       },
     });
     $(document).ajaxError((res) => {
-      console.log(res);
+      console.log("Error =>",res);
 
       $("#send_request").attr("disabled", false);
       $("#send_request").html("Send Request");
