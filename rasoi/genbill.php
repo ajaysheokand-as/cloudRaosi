@@ -5,6 +5,7 @@ session_start();
 require_once "../config.php";
 require_once "class/User.php";
 require_once "islogin.php";
+require_once "./components/custom_item.php";
 // print_r($user);
 $tableid = 0;
 $groupid = 0;
@@ -186,8 +187,11 @@ function fetchSubCategory($cat_id)
               <label class="custom-control-label" for="customSwitch">Table View</label>
             </div>
           </div>
+          <?php custom_item(); ?>
+
           <div class="row">
-            <div class="col-lg-8 col-md-12">
+            <div class="col-lg-8 col-md-12">    
+                  
               <div class="row">
                 <?php
                 if ($restaurant == "" || $admin_id == "") {
@@ -197,6 +201,7 @@ function fetchSubCategory($cat_id)
                   } else $isLogined = false;
                 }
                 // print_r($user);
+
                 $sql = "SELECT * FROM category  WHERE restaurant = $user->restaurant AND status = true ";
                 $n = mysqli_query($con, $sql);
                 $i = 1;
@@ -235,7 +240,7 @@ function fetchSubCategory($cat_id)
 
             </div>
             <!-- /.col -->
-            <div class="col-lg-4 table-responsive">
+            <div class="col-lg-4 table-responsive"> 
               <div class="row no-print">
                 <div class="col-12">
                   <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal-default">

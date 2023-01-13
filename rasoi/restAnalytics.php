@@ -3,7 +3,7 @@
 <?php session_start();
 require_once("class/User.php");
 require_once("islogin.php");
-require_once("config.php");
+require_once("../config.php");
 ?>
 
 <head>
@@ -54,32 +54,8 @@ require_once("config.php");
         <!-- Navbar -->
         <?php
         include_once("navbar.php");
-        // require_once("../config.php");
         require_once("logininfo.php");
-        //  $con = mysqli_connect($host, $username, $password, $db);
-
-        //  if (mysqli_connect_errno()){
-        //  echo("Error");
-        //  }
-        //  else
-        //  {
-        //    //echo("Successfull");
-        //    if ($res->num_rows > 0) {
-        //       //echo "Output fetched successfully";
-
-        //       }
-        //  }
-        //die("error");
         date_default_timezone_set("Asia/Calcutta");
-
-        //  $sql = "SELECT * FROM users ";
-        //  $result = $conn->query($sql);
-
-        // if ($result->num_rows > 0) {
-        // 	echo "Output fetched successfully";
-
-        //}
-
         ?>
         <!-- /.navbar -->
 
@@ -114,7 +90,7 @@ require_once("config.php");
 
                             <div class="card">
                                 <div class="card-header">
-                                    <h3 class="card-title">All Resturant </h3>
+                                    <h3 class="card-title">All Restaurant </h3>
                                 </div>
                                 <!-- /.card-header -->
                                 <div class="card-body">
