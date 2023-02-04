@@ -59,11 +59,10 @@ if (isset($_GET['assign']) && isset($_GET['restaurant'])) {
 
 
     //echo("Successfull");
-    $sql = "SELECT * FROM restaurant ";
+   $sql = "SELECT * FROM restaurant ";
     $res = $con->query($sql);
     if ($res->num_rows > 0) {
       //echo "Output fetched successfully";
-
     }
 
     //die("error");
@@ -123,21 +122,14 @@ if (isset($_GET['assign']) && isset($_GET['restaurant'])) {
                           <thead>
                             <tr role="row">
                               <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending">Action</th>
+                              <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Type</th>
                               <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Name</th>
                               <th class="sorting" tabindex="0" id="abc" aria-controls="example1" rowspan="1" colspan="1" aria-label="Rendering engine: activate to sort column ascending">Reg. Date</th>
-                            
                               <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Rendering engine: activate to sort column ascending">Restaurant ID</th>
-                             
                               <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Mob. No.</th>
-                              <!-- <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Phone. No.</th> -->
                               <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending">Email</th>
                               <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending">GST. No.</th>
-                              <!-- <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending">Country</th>
-                              <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending">State</th>
-                              <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending">District</th> -->
                               <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending">City/Village</th>
-
-
                             </tr>
                           </thead>
                           <tbody>
@@ -157,8 +149,9 @@ if (isset($_GET['assign']) && isset($_GET['restaurant'])) {
                                   <input class="form-check-input" id="r_status_<?php echo $row['restaurantid']; ?>" type="checkbox" hidden checked onclick="res_status(this,<?php echo $row['restaurantid']; ?>);">
                                    <?php } ?>
                                   <a class="btn btn-dark btn-sm"  href="?assign=1&restaurant=<?php echo $row['restaurantid']; ?>" style="margin: 2px;">  Assign </a> </div></td>
+                                <td class="sorting_1"><?php echo restaurant_type($row['type']); ?></td>
                                 <td class="sorting_1"><?php echo $row['name']; ?></td>
-                                <td><?php echo $row['add_on']; ?> </td>
+                                <td><?php echo  date('d-m-Y', strtotime($row['add_on'])); ?> </td>
                                 <td class="dtr-control"><?php echo $row['restaurantid']; ?> </td>
                                 
                                 <td><?php echo $row['mobile']; ?> </td>

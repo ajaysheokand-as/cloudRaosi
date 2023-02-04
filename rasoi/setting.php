@@ -38,6 +38,7 @@ if ($admintype == 2)
     <?php
     include("navbar.php");
     include("logininfo.php");
+    $restaurant_type = restaurant_permission($con, $restaurant);
     ?>
     <!-- /.navbar -->
 

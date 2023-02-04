@@ -7,7 +7,7 @@ if (mysqli_num_rows($res) > 0)
 
   while ($permission = mysqli_fetch_assoc($res))
     array_push($permissions, $permission['permission']);
-
+  $restaurant_type = restaurant_permission($con, $restaurant);
 // print_r($permissions);
 ?>
 <!-- Sweetalert2 -->

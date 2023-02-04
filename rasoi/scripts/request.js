@@ -1,8 +1,8 @@
 // fetch category
 const constant = {
   // url: "https://spicyrasoi.com/api/",
-  url: "https://cloudrasoi.com/api/",
-  // url: "http://localhost/projects/cloudRaosi/cloud-rasoi-backend",
+  // url: "https://cloudrasoi.com/api/",
+  url: "http://localhost/projects/cloudRaosi/cloud-rasoi-backend/",
 };
 
 function ajaxRequest(url, data, success, optional) {

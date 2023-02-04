@@ -181,17 +181,19 @@ function fetchSubCategory($cat_id)
       <section class="content">
         <div class="container-fluid">
           <div class="row" style="margin-bottom: 10px;">
-            <div class="custom-control custom-switch">
-              <!-- <label class="custom-control-label" for="">Category View</label> -->
+            <!-- <div class="custom-control custom-switch">
               <input type="checkbox" class="custom-control-input" onchange="changetToTableView(this);" id="customSwitch">
               <label class="custom-control-label" for="customSwitch">Table View</label>
-            </div>
+            </div> -->
           </div>
-          <?php custom_item(); ?>
-
           <div class="row">
-            <div class="col-lg-8 col-md-12">    
-                  
+            <div class="col-lg-8 col-md-12">
+              <div class="row">
+                <!-- Quick add Item Start -->
+                <?php custom_item(); ?>
+
+                <!-- Quick add Item End -->
+              </div>
               <div class="row">
                 <?php
                 if ($restaurant == "" || $admin_id == "") {
@@ -240,7 +242,7 @@ function fetchSubCategory($cat_id)
 
             </div>
             <!-- /.col -->
-            <div class="col-lg-4 table-responsive"> 
+            <div class="col-lg-4 table-responsive">
               <div class="row no-print">
                 <div class="col-12">
                   <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal-default">
@@ -699,7 +701,7 @@ function fetchSubCategory($cat_id)
         dataType: "json",
         success: function(result) {
           // console.log(result);
-          if (result.success == true ) {
+          if (result.success == true) {
             // clearTable();
             products.orderid = result.data.orderid;
             products.todayOrderNo = result.data.today_orders;

@@ -872,7 +872,6 @@ if (isset($_GET['sms'])) {
       },
     });
     $(document).ajaxError((res) => {
-      console.log("Error =>",res);
 
       $("#send_request").attr("disabled", false);
       $("#send_request").html("Send Request");
