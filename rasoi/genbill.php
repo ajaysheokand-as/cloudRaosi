@@ -187,7 +187,7 @@ function fetchSubCategory($cat_id)
               <label class="custom-control-label" for="customSwitch">Table View</label>
             </div>
           </div>
-          <!-- <?php custom_item(); ?> -->
+       <?php //custom_item(); ?>
 
           <div class="row">
             <div class="col-lg-8 col-md-12">    
