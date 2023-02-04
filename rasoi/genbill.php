@@ -184,8 +184,10 @@ function fetchSubCategory($cat_id)
             <!-- <div class="custom-control custom-switch">
               <input type="checkbox" class="custom-control-input" onchange="changetToTableView(this);" id="customSwitch">
               <label class="custom-control-label" for="customSwitch">Table View</label>
-            </div> -->
+            </div>
           </div>
+       <?php //custom_item(); ?>
+
           <div class="row">
             <div class="col-lg-8 col-md-12">
               <div class="row">
